@@ -25,7 +25,7 @@ Push your local `hack/dataops-env` folder to the space. Assuming you have `git` 
 git init
 git add .
 git commit -m "Final OpenEnv DataOps submission with Dockerfile and requirements"
-git remote add origin https://huggingface.co/spaces/<your-username>/dataops-env
+git remote add origin https://huggingface.co/spaces/kartik-kumar-pandey/dataops-env
 git push -u origin main
 ```
 *Note: Hugging Face will automatically detect the patched `Dockerfile`, build it, and launch your OpenEnv API.*

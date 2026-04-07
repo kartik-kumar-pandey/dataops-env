@@ -1,3 +1,12 @@
+---
+title: DataOps Env
+emoji: 🚀
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # Autonomous DataOps Agent Environment
 
 ## 1. Problem
