@@ -1,0 +1,7 @@
+name: dataops-env
+description: Autonomous DataOps RL environment
+tasks:
+  - easy
+  - medium
+  - hard
+entry_point: my_env.env:DataOpsEnv

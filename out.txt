@@ -1,0 +1,16 @@
+                                                                               
+ Usage: openenv serve [OPTIONS] [ENV_PATH]                                     
+                                                                               
+ Serve environments locally (TODO: Phase 4)                                    
+                                                                               
++- Arguments -----------------------------------------------------------------+
+|   env_path      [ENV_PATH]  Path to the environment directory (default:     |
+|                             current directory)                              |
++-----------------------------------------------------------------------------+
++- Options -------------------------------------------------------------------+
+| --port    -p      INTEGER  Port to serve on [default: 8000]                 |
+| --host            TEXT     Host to bind to [default: 0.0.0.0]               |
+| --reload                   Enable auto-reload on code changes               |
+| --help                     Show this message and exit.                      |
++-----------------------------------------------------------------------------+
+
