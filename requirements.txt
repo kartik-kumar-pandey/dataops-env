@@ -3,3 +3,5 @@ openai
 openenv-core
 fastapi
 uvicorn
+python-dotenv
+requests
