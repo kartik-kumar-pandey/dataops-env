@@ -126,13 +126,16 @@ Just output the exact tool name and nothing else. If no errors remain, always ch
 
     # Extract score logic based on remaining errors
     errors = obs.get("errors", [])
-    if len(errors) == 0:
-        score = 1.0
-    else:
-        score = max(0.0, 1.0 - (len(errors) * 0.1))
+    
+    score = 1.0
+    score -= len(errors) * 0.2
+    score -= max(0, step - 6) * 0.05
+    
+    # Ensure strictly in (0, 1) to pass openenv validation
+    score = max(0.01, min(0.99, round(score, 2)))
     
     # STRICT REQUIREMENT: [END] line
-    score_success = "true" if score == 1.0 else "false"
+    score_success = "true" if len(errors) == 0 else "false"
     rewards_str = ",".join([f"{r:.2f}" for r in rewards])
     print(f"[END] success={score_success} steps={step} score={score:.2f} rewards={rewards_str}", flush=True)
 
